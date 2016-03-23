@@ -6,7 +6,7 @@ function Send-SlackApi {
         $Body = @{},
         $Token = $script:SlackApiToken
     )
-    if ([string]::isnullorempty($token){
+    if ([string]::isnullorempty($token)){
         throw "Please supply a Slack Api Token with Set-SlackApiToken."
     }
     $Body.token = $Token
